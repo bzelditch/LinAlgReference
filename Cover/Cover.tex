@@ -1,0 +1,72 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{scrartcl}   % KOMA
+
+\usepackage[a4paper,pdftex]{geometry}   % A4paper margins
+\setlength{\oddsidemargin}{5mm}         % Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}  
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+
+% --------------------------------------------------------------------
+% Definitions (do not change this)
+% --------------------------------------------------------------------
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}   % Horizontal rule
+
+\makeatletter                           % Title
+\def\printtitle{%                       
+    {\centering \@title\par}}
+\makeatother                                    
+
+\makeatletter                           % Author
+\def\printauthor{%                  
+    {\centering \large \@author}}               
+\makeatother                            
+
+% --------------------------------------------------------------------
+% Metadata (Change this)
+% --------------------------------------------------------------------
+\title{  
+                  % [.5cm]   
+          % \HRule{0.5pt} \\                      % Upper rule
+            \LARGE \textbf{\uppercase{Linear Algebra}}    % Title
+           %\HRule{2pt} \\ [0.5cm]      % Lower rule + 0.5cm spacing
+                    % Todays date
+}
+        
+
+
+\author{
+        Ben Zelditch\\   
+        Cornell University\\  
+        \texttt{bz87@cornell.edu} \\
+}
+
+
+\begin{document}
+% ------------------------------------------------------------------------------
+% Maketitle
+% ------------------------------------------------------------------------------
+\thispagestyle{empty}       % Remove page numbering on this page
+
+\printtitle                 % Print the title data as defined above
+    \vfill
+\printauthor                % Print the author data as defined above
+\newpage
+% ------------------------------------------------------------------------------
+% Begin document
+% ------------------------------------------------------------------------------
+      % Set page numbering to begin on this page
+
+ \textit{He who controls the past controls the future. He who controls the present controls the past.} 
+ 
+ \vskip 1mm		- George Orwell
+\section{Motivation}
+
+I have always had an uneasy relationship with linear algebra. The first time I encountered this subject was
+the second semester of my senior year of high school. Having been already accepted into college, I did not 
+
+\section{What to Expect}
+
+\end{document}
