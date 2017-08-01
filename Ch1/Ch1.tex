@@ -76,12 +76,16 @@ $$x + y = (x_1 + y_1, x_2 + y_2, \ldots, x_n + y_n) \: \textrm{and} \: \alpha x 
 
 The additive identity $0 \in \mathbb{R}^n$ is $(0, 0 \ldots, 0)$ and the multiplicative identity $1 \in \mathbb{R}$ is 1, of course. 
 
-Before moving on, there are a few properties of vector spaces that are basic but important and we won't prove them here. The first is that the additive identity $0$ is unique. The second is that every vector $x$ in the vector space has a unique additive inverse, denoted $-x$. The third is that $-1(x) = -x$ for all $x$ in the vector space.
+Before moving on, there are a few properties of vector spaces that are basic, but fundamental, and we won't prove them here. The first is that the additive identity $0$ is unique. The second is that every vector $x$ in the vector space has a unique additive inverse, denoted $-x$. The third is that $-1(x) = -x$ for all $x$ in the vector space.
 
-So there you have it! Not too complicated, right? Vector spaces are just a collection of vectors with a few important properties. Let's move on to a few more definitions about them before moving on to the real heart of linear algebra:  linear transformations.
+Another important concept is the addition of two vector spaces. If $U$ and $V$ are two vector spaces, then we define the \textit{sum} of $U$ and $V$ to be $U + V = \{ u + v : \: u \in U, v \in V \}$. For example, if $U = \{ (x_1, 0) : x_1 \in \mathbb{R} \}$ and $V = \{ (0, x_2) : x_2 \in \mathbb{R} \}$, then $U + V = \{ (x_1, 0) + (0, x_2) : x_1 \in \mathbb{R}, x_2 \in \mathbb{R} \} = \{ (x_1, x_2) : x_1 \in \mathbb{R}, x_2 \in \mathbb{R} \} = \mathbb{R}^2$. Observe from this example that we can now decompose a vector space into the sum of two other vector spaces. This is a very useful tool that we'll use later. Finally, we define the \textit{direct sum} of two vector spaces. We say that a vector $W$ is the direct sum of two vector spaces $U$ and $V$ if and only if $W = U + V$ \textit{and} $U \cap V = \{0\}$. This is written as $W = U \oplus V$. In fact, the example we just looked at is an example of a direct sum! Therefore we can write $\mathbb{R}^2 = \{ (x_1, 0) : x_1 \in \mathbb{R} \} \oplus \{ (0, x_2) : x_2 \in \mathbb{R} \}$. More on this later.
 
 \subsection*{Subspaces}
 
-A subspace $U$ of the vector space $V$ is a subset $U \subseteq V$ that is itself a vector space. For example, if $V = \mathbb{R}^2$ then one possible subspace of $V$ is $U = \{ (x_1, 0) : x_1 \in \mathbb{R} \}$. It isn't hard to see that $U$ satisfies all of the vector space properties listed above, so it definitely qualifies as a subspace of $V$. Well, that's about it for subspaces. Let's move on to some more interesting things.
+A subspace $U$ of the vector space $V$ is a subset $U \subseteq V$ that is itself a vector space. For example, if $V = \mathbb{R}^2$ then one possible subspace of $V$ (as we saw before) is $U = \{ (x_1, 0) : x_1 \in \mathbb{R} \}$. It isn't hard to see that $U$ satisfies all of the vector space properties listed above, so it definitely qualifies as a subspace of $V$. 
+
+\subsection*{Summary}
+
+So there you have it! Not too complicated, right? Vector spaces are just a collection of vectors equipped with a few important properties. Now that we're comfortable working with them, we can move on to the heart of linear algebra:  linear transformations.
 
 \end{document}

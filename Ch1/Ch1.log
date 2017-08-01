@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 JUL 2017 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 JUL 2017 21:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -632,13 +632,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  (./Ch1.aux) ) 
 Here is how much of TeX's memory you used:
- 13323 strings out of 492995
- 259943 string characters out of 6132704
- 307397 words of memory out of 5000000
- 16593 multiletter control sequences out of 15000+600000
- 13024 words of font info for 50 fonts, out of 8000000 for 9000
+ 13325 strings out of 492995
+ 259964 string characters out of 6132704
+ 308397 words of memory out of 5000000
+ 16594 multiletter control sequences out of 15000+600000
+ 13371 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,54p,682b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,7n,54p,1093b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -646,12 +646,13 @@ cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on Ch1.pdf (3 pages, 80437 bytes).
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb>
+Output written on Ch1.pdf (3 pages, 92141 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
