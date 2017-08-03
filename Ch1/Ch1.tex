@@ -82,9 +82,39 @@ Before moving on, there are a few properties of vector spaces that are basic, bu
 
 A subspace $U$ of the vector space $V$ is a subset $U \subseteq V$ that is itself a vector space. For example, if $V = \mathbb{R}^2$ then one possible subspace of $V$ is $U = \{ (x_1, 0) : x_1 \in \mathbb{R} \}$. It isn't hard to see that $U$ satisfies all of the vector space properties listed above, so it definitely qualifies as a subspace of $V$. 
 
-\subsection*{Vector Space Addition}
+\subsection*{Sums and Direct Sums}
 
 Another important concept is the addition of two vector spaces. If $U$ and $V$ are two vector spaces, then we define the \textit{sum} of $U$ and $V$ to be $U + V = \{ u + v : \: u \in U, v \in V \}$. For example, if $U = \{ (x_1, 0) : x_1 \in \mathbb{R} \}$ and $V = \{ (0, x_2) : x_2 \in \mathbb{R} \}$, then $U + V = \{ (x_1, 0) + (0, x_2) : x_1 \in \mathbb{R}, x_2 \in \mathbb{R} \} = \{ (x_1, x_2) : x_1 \in \mathbb{R}, x_2 \in \mathbb{R} \} = \mathbb{R}^2$. Observe from this example that we can now decompose a vector space into the sum of two other vector spaces. This is a very useful tool that we'll use later. Finally, we define the \textit{direct sum} of two vector spaces. We say that a vector space $W$ is the direct sum of two vector spaces $U$ and $V$ if and only if $W = U + V$ \textit{and} $U \cap V = \{0\}$. This is written as $W = U \oplus V$. In fact, the example we just looked at is an example of a direct sum! Therefore we can write $\mathbb{R}^2 = \{ (x_1, 0) : x_1 \in \mathbb{R} \} \oplus \{ (0, x_2) : x_2 \in \mathbb{R} \}$. More on this later.
+
+\subsection*{Linear Independence and Span}
+
+Let $v_1, v_2, \ldots, v_n \in \mathbb{R}^n$ be a set of vectors. A \textit{linear combination} of these vectors is a new vector of the form $a_1 v_1 + a_2 v_2 + \ldots + a_n v_n$, where $a_1, a_2, \ldots, a_n \in \mathbb{R}$ are some real numbers. The \textit{span} of the vectors $v_1, v_2, \ldots, v_n $ is defined to be the set of all linear combinations of the vectors, i.e.
+
+$$\textrm{span} (v_1, v_2, \ldots, v_n) = \{ a_1 v_1 + a_2 v_2 + \ldots + a_n v_n : a_1, a_2, \ldots, a_n \in \mathbb{R}\}.$$ 
+
+The span of a set of vectors is \textit{always} a vector space. If a particular vector space $V$ is equal to the span of a set of vectors $v_1, v_2, \ldots, v_n$ then we say that $v_1, v_2, \ldots, v_n$ span $V$. Observe that the vectors $e_1 = (1, 0)$ and $e_2 = (0, 1)$ span $\mathbb{R}^2$ because $\textrm{span} (e_1, e_2) = \{a_1 e_1 + a_2 e_2 : a_1, a_2 \in \mathbb{R}\} = \{(a_1, a_2) : a_1, a_2 \in \mathbb{R}\} = \mathbb{R}^2$. Also, a vector space is \textit{finite dimensional} if some finite set of vectors spans it. All examples of vector spaces that we'll look at here will be finite dimensional.
+
+Shifting gears, let $v_1, v_2, \ldots, v_n \in \mathbb{R}^n$ be the set of vectors we introduced earlier and suppose that $v \in \textrm{span}(v_1, v_2, \ldots, v_n)$. By definition, this means that we can write $v = a_1 v_1 + a_2 v_2 + \ldots + a_n v_n$ for some numbers $a_1, a_2, \ldots, a_n \in \mathbb{R}$. 
+
+But are the numbers $a_1, a_2, \ldots, a_n$ unique? In other words, is there another way to write $v$ in terms of the vectors $v_1, v_2, \ldots, v_n$? Suppose that there is, so we can write $v = \hat{a}_1 v_1 + \hat{a}_2 v_2 + \ldots + \hat{a}_n v_n$. Then subtracting our two equations for $v$ we get
+
+$$0 = (a_1 - \hat{a}_1) v_1 + (a_2 - \hat{a}_2) v_2 + \ldots + (a_n - \hat{a}_n) v_n.$$
+
+Clearly this equation holds when $a_1 - \hat{a}_1 = a_2 - \hat{a}_2 = \ldots = a_n - \hat{a}_n = 0$. If this is the only way to satisfy this equation then we say that the vectors $v_1, v_2, \ldots, v_n$ are \textit{linearly independent}. Note that this implies that $a_i = \hat{a}_i$ for all $i$ so there is only one way to write $v$. To reiterate, a set of vectors $v_1, v_2, \ldots, v_n$ is linearly independent if and only if $a_1 v_1 + a_2 v_2 + \ldots + a_n v_n = 0$ implies that $a_1 = a_2 = \ldots = a_n = 0$. Observe that the vectors $e_1$ and $e_2$ that we looked at before are linearly independent because
+
+$$a_1 e_1 + a_2 e_2 = (a_1, 0) + (0, a_2) = (a_1, a_2) = (0, 0)$$
+
+immediately implies that $a_1 = a_2 = 0$. On the other hand, if we let $v_1 = (1, 2)$ and $v_2 = (3, 6)$ then
+
+$$a_1 v_1 + a_2 v_2 = a_1 (1, 2) + a_2 (3, 6) = (0, 0)$$
+
+also holds with $a_1 = -3$ and $a_2 = 1$. Therefore $v_1$ and $v_2$ are \textit{not} linearly independent. Of course, setting $a_1 = a_2 = 0$ would also work as it always does.
+
+Intuitively, a set of vectors is (linearly) independent if they all point in mutually orthogonal directions. One can think of each independent vector in the set as providing another dimension to the span. In the case where $v_1 = (1, 2)$ and $v_2 = (3, 6)$ above, the vector $v_1$ and $v_2$ point in the same direction, so $v_2$ does not provide another dimension to their span (or vice versa with $v_1$). 
+
+Linear independence is another one of those fundamental concepts of linear algebra and it comes up again and again. If its definition seems strange and its motivation unclear then that's totally OK. It will make more sense when we continue with bases.
+
+\subsection*{Bases}
 
 
 
