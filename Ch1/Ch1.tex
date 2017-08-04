@@ -108,13 +108,17 @@ immediately implies that $a_1 = a_2 = 0$. On the other hand, if we let $v_1 = (1
 
 $$a_1 v_1 + a_2 v_2 = a_1 (1, 2) + a_2 (3, 6) = (0, 0)$$
 
-also holds with $a_1 = -3$ and $a_2 = 1$. Therefore $v_1$ and $v_2$ are \textit{not} linearly independent. Of course, setting $a_1 = a_2 = 0$ would also work as it always does.
+also holds with $a_1 = -3$ and $a_2 = 1$. Therefore $v_1$ and $v_2$ are \textit{not} linearly independent; they're actually \textit{linearly dependent}. Of course, setting $a_1 = a_2 = 0$ would also work as it always does.
 
 Intuitively, a set of vectors is (linearly) independent if they all point in mutually orthogonal directions. One can think of each independent vector in the set as providing another dimension to the span. In the case where $v_1 = (1, 2)$ and $v_2 = (3, 6)$ above, the vector $v_1$ and $v_2$ point in the same direction, so $v_2$ does not provide another dimension to their span (or vice versa with $v_1$). 
 
 Linear independence is another one of those fundamental concepts of linear algebra and it comes up again and again. If its definition seems strange and its motivation unclear then that's totally OK. It will make more sense when we continue with bases.
 
 \subsection*{Bases}
+
+Let $V$ be a vector space. A \textit{basis} of $V$ is a linearly independent set of vectors $v_1, v_2, \ldots, v_k$ that spans $V$. For example, the set $e_1 = (1, 0, \ldots, 0), e_2 = (0, 1, \ldots, 0), \ldots, e_n = (0, 0, \ldots, 1)$ is a basis for $\mathbb{R}^n$ because it is a linearly independent set that spans $\mathbb{R}^n$ (also called the standard basis).  Similarly, $(1, 3)$ and $(7, -4)$ form a basis for $\mathbb{R}^2$ for the same reason. On the other hand, $(1, 3)$, $(7, -4)$, and $(3, 10)$ do not form a basis for $\mathbb{R}^2$ because they are linearly dependent, even though they span.
+
+Bases are the building blocks of vector spaces. Given a vector space $V$ and a basis $v_1, v_2, \ldots, v_k$, any vector $v \in V$ can be written \textit{uniquely} as a linear combination $v = a_1 v_1 + a_2 v_2 + \ldots + a_k v_k$ of the basis vectors. This is a very important idea because it is often useful to decompose a vector into a linear combination of basis vectors when writing proofs. Here are few more important facts about bases:
 
 
 
