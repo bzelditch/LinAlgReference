@@ -116,10 +116,26 @@ Linear independence is another one of those fundamental concepts of linear algeb
 
 \subsection*{Bases}
 
-Let $V$ be a vector space. A \textit{basis} of $V$ is a linearly independent set of vectors $v_1, v_2, \ldots, v_k$ that spans $V$. For example, the set $e_1 = (1, 0, \ldots, 0), e_2 = (0, 1, \ldots, 0), \ldots, e_n = (0, 0, \ldots, 1)$ is a basis for $\mathbb{R}^n$ because it is a linearly independent set that spans $\mathbb{R}^n$ (also called the standard basis).  Similarly, $(1, 3)$ and $(7, -4)$ form a basis for $\mathbb{R}^2$ for the same reason. On the other hand, $(1, 3)$, $(7, -4)$, and $(3, 10)$ do not form a basis for $\mathbb{R}^2$ because they are linearly dependent, even though they span.
+Let $V$ be a vector space. A \textit{basis} of $V$ is a linearly independent set of vectors $b_1, b_2, \ldots, b_k$ that spans $V$. For example, the set $e_1 = (1, 0, \ldots, 0), e_2 = (0, 1, \ldots, 0), \ldots, e_n = (0, 0, \ldots, 1)$ is a basis for $\mathbb{R}^n$ because it is a linearly independent set that spans $\mathbb{R}^n$ (also called the standard basis).  Similarly, $(1, 3)$ and $(7, -4)$ form a basis for $\mathbb{R}^2$ for the same reason. On the other hand, $(1, 3)$, $(7, -4)$, and $(3, 10)$ do not form a basis for $\mathbb{R}^2$ because they are linearly dependent, even though they span.
 
-Bases are the building blocks of vector spaces. Given a vector space $V$ and a basis $v_1, v_2, \ldots, v_k$, any vector $v \in V$ can be written \textit{uniquely} as a linear combination $v = a_1 v_1 + a_2 v_2 + \ldots + a_k v_k$ of the basis vectors. This is a very important idea because it is often useful to decompose a vector into a linear combination of basis vectors when writing proofs. Here are few more important facts about bases:
+Bases are the building blocks of vector spaces. Given a vector space $V$ and a basis $b_1, b_2, \ldots, b_k$, any vector $v \in V$ can be written \textit{uniquely} as a linear combination $v = a_1 b_1 + a_2 b_2 + \ldots + a_k b_k$ of the basis vectors. This is a very important idea because it is often useful to decompose a vector into a linear combination of basis vectors when writing proofs. Here are few more important facts about bases:
 
+\begin{enumerate}
+\item A list of vectors $v_1, v_2, \ldots, v_k \in V$ is a basis of $V$ if and only if any vector $v \in V$ can be written uniquely in the form
+
+$$v = a_1 v_1 + a_2 v_2 + \ldots + a_k v_k$$
+
+for some $a_1, a_2, \ldots, a_k \in \mathbb{R}$.
+\item Every list of spanning vectors $v_1, v_2, \ldots, v_n \in V$ can be reduced to a basis of $V$ by throwing away some of the $v_i$.
+
+\item Every finite-dimensional vector space has a basis.
+
+\item Every linearly independent list of vectors $v_1, v_2, \ldots, v_j \in V$ can be extended to a basis of $V$ by adding more independent vectors to the list.
+
+\item Suppose that $V$ is a vector space and $U \subseteq V$ is a subspace. Then there exists a subspace $W \subseteq V$ such that $V = U \oplus W$.
+\end{enumerate}
+
+\subsection*{Dimension}
 
 
 \subsection*{Summary}
