@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+\title{Chapter 2}
+\author{Ben Zelditch}
+
+\begin{document}
+
+\maketitle
+
+\section*{Linear Transformations}
+
+Linear transformations (or maps) are the most important topic in linear algebra. In fact, linear algebra basically is the study of linear transformations between vector spaces. There are a few different ways one can think about them and we'll look at all of them in this chapter. 
+
+\subsection*{Linear Transformations}
+
+Let's first define what a linear transformation is. Let $V, W$ be two vector spaces. A linear transformation $T : V \rightarrow W$ is a function with the following two properties:
+
+\vskip 3mm
+
+\textbf{Additivity}
+
+$T(u + v) = T(u) + T(v)$ for all $u, v \in V$
+
+\vskip 2mm
+
+\textbf{Homogeneity}
+
+$T(\alpha v) = \alpha T(v)$ for all $\alpha \in \mathbb{R}$ and $v \in V$
+
+\vskip 5mm
+
+That's it. Pretty simple, right? Note that homogeneity implies that $T(0) = 0$ for \textit{any} linear map $T$ because
+
+$$T(0) = T(0v) = 0T(v) = 0.$$
+
+From now on we'll use the notations $T(v)$ and $Tv$ interchangeably. Most textbooks do this already, but it's worth mentioning again that they mean the same thing to clear up any confusion.
+
+\vskip 2mm
+
+The set of all linear maps from $V$ to $W$ is denoted $\mathcal{L}(V, W)$. Once again, let $T \in \mathcal{L}(V, W)$ be a linear map. Let $v \in V$ be a vector and let $b_1, b_2, \ldots, b_n$ be a basis of $V$.  Remember from Chapter 1 that we can we can write
+
+$$v = a_1 b_1 + a_2 b_2 + \ldots + a_n b_n$$
+
+for some $a_1, a_2, \ldots, a_n \in \mathbb{R}$. By the properties of linear transformations that we looked at above, this implies that
+
+$$Tv = T(a_1 b_1 + a_2 b_2 + \ldots + a_n b_n) = a_1 T(b_1) + a_2 T (b_2) + \ldots + a_n T( b_n).$$
+
+This is huge. This fact is telling us that a linear map $T : V \rightarrow W$ is \textit{uniquely} determined by where it maps the basis vectors. Better yet, we can \textit{define} a linear transformation simply by defining where the transformations maps the basis vectors. Since any other vector in the vector space can be written uniquely in terms of the basis vectors, its image under the transformation must be uniquely determined as well. It's that easy. 
+
+\subsection*{Linear Transformations as Vector Spaces}
+
+
+
+
+\end{document}
