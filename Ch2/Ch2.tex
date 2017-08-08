@@ -79,6 +79,16 @@ for $u \in U$. In other words, $ST$ is just the usual composition $S \circ T$. W
 
 \subsection*{Null Spaces and Ranges}
 
+Let $T \in \mathcal{L} (V, W)$. The \textit{null space} of $T$, denoted $\textrm{null} \: T$, is the subset of $V$ consisting of those vectors that $T$ maps to 0:
+
+$$\textrm{null} \: T = \{ v \in V : Tv = 0 \}.$$
+
+For example, suppose that $T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ is the map that shifts a two-dimensional vector backward:
+
+$$T( (x_1, x_2)^T ) = (x_2, 0)^T.$$
+
+Then $\textrm{null} \: T = \{ (x_1, 0)^T : x_1 \in \mathbb{R} \}$, i.e. the null space of $T$ is the $x$-axis. Observe that $\textrm{null} \: T$ is a subspace of $\mathbb{R}^2$. In fact, this is always true! For any linear map $T \in \mathcal{L} (V, W)$, we have that $\textrm{null} \: T \subseteq V$ is a subspace of $V$.
+
 
 
 \end{document}
