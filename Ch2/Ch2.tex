@@ -59,7 +59,7 @@ for some $a_1, a_2, \ldots, a_n \in \mathbb{R}$. By the properties of linear tra
 
 $$Tv = T(a_1 b_1 + a_2 b_2 + \ldots + a_n b_n) = a_1 T b_1 + a_2 T b_2 + \ldots + a_n T b_n.$$
 
-This is huge. This fact is telling us that a linear map $T : V \rightarrow W$ is \textit{uniquely} determined by where it maps the basis vectors. Better yet, we can \textit{define} a linear transformation simply by defining where the transformations maps the basis vectors. Since any other vector in the vector space can be written uniquely in terms of the basis vectors, its image under the transformation must be uniquely determined as well. It's that easy. 
+This is huge. This fact is telling us that a linear map $T : V \rightarrow W$ is \textit{uniquely} determined by where it maps the basis vectors. Better yet, we can \textit{define} a linear transformation simply by defining where the transformation maps the basis vectors. Since any other vector in the vector space can be written uniquely in terms of the basis vectors, its image under the transformation must be uniquely determined as well. It's that easy. 
 
 \subsection*{Linear Transformations as Vector Spaces}
 
@@ -88,6 +88,23 @@ For example, suppose that $T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ is the map
 $$T( (x_1, x_2)^T ) = (x_2, 0)^T.$$
 
 Then $\textrm{null} \: T = \{ (x_1, 0)^T : x_1 \in \mathbb{R} \}$, i.e. the null space of $T$ is the $x$-axis. Observe that $\textrm{null} \: T$ is a subspace of $\mathbb{R}^2$. In fact, this is always true! For any linear map $T \in \mathcal{L} (V, W)$, we have that $\textrm{null} \: T \subseteq V$ is a subspace of $V$.
+
+\vskip 3mm
+
+For $T \in \mathcal{L} (V, W)$ we define the \textit{range} of $T$, denoted $\textrm{range} \: T$, to be the subset of $W$ consisting of vectors of the form $Tv$ for some $v \in V$:
+
+$$\textrm{range} \: T = \{ Tv : v \in V \}.$$
+
+Sometimes the word \textit{image} is used instead of range, but they mean the same thing. For example, if we take $T$ to be the backwards shift map that we looked at above, then
+
+$$\textrm{range} \: T = \{ (x_2, 0)^T : x_2 \in \mathbb{R} \}.$$
+
+In other words, the range of $T$ is the $x$-axis. At first glance this may seem confusing because the null space of $T$ is also the $x$-axis, but remember:  the range of a linear map $T$ is a subset of the \textit{co-domain} and the null space is a subset of the \textit{domain}. Similar to the null space, we have that $\textrm{range} \: T \subseteq W$ is a subspace of $W$.
+
+\vskip 4mm
+Now that we're familiar with null spaces and ranges, we can state a few facts about them. Let's look at the most important one first. For $T \in \mathcal{L} (V, W)$ we have
+
+$$\textrm{dim} \: V = \textrm{dim} \: \textrm{null} \: T + \textrm{dim} \: \textrm{range} \: T.$$
 
 
 
