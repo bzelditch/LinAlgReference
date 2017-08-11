@@ -83,7 +83,7 @@ Let $T \in \mathcal{L} (V, W)$. The \textit{null space} of $T$, denoted $\textrm
 
 $$\textrm{null} \: T = \{ v \in V : Tv = 0 \}.$$
 
-For example, suppose that $T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ is the map that shifts a two-dimensional vector backward:
+The null space is also called the \textit{kernel}. As an example, suppose that $T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ is the map that shifts a two-dimensional vector backward:
 
 $$T( (x_1, x_2)^T ) = (x_2, 0)^T.$$
 
@@ -104,6 +104,27 @@ Now that we're familiar with null spaces and ranges, we can state a few facts ab
 
 $$\textrm{dim} \: V = \textrm{dim} \: \textrm{null} \: T + \textrm{dim} \: \textrm{range} \: T.$$
 
+Surprising, isn't it? At first glance it isn't clear why the dimension of the domain of a linear map should be related to the dimension of the codomain in such a simple way, but it's true. In fact, the proof of this theorem isn't very difficult! It relies solely on the properties of bases that we've looked at here. 
 
+For a sanity check, let's look at the backwards shift map again. Recall that the domain of the map was $\mathbb{R}^2$, so its dimension was two. In addition, we determined that the null space and the range were the $x$-axis, each of which was one dimensional. Since $2 = 1 + 1$, the theorem holds.
+
+The reason this theorem is so useful is because we often know two of the terms in the equality, but not the other (typically we don't know the dimension of the kernel), so it allows us to quickly find the third. It also allows us to deduce additional facts about linear maps. For example, suppose that $V$ and $W$ are finite-dimensional vector spaces such that $\textrm{dim} \: V > \textrm{dim} \: W$. Then \textit{no} linear map from $V$ to $W$ is one-to-one. This is a pretty strong statement, but its proof is remarkably straightforward given the theorem. Here it is: 
+
+\vskip 3mm
+\begin{proof}
+Let $T \in \mathcal{L} (V, W)$. Then
+
+$$ \textrm{dim} \:  \textrm{null}  \: T = \textrm{dim} V - \textrm{dim} \: \textrm{range} \: T$$
+
+$$ \geq \textrm{dim} \: V - \textrm{dim} \: W$$
+
+$$ > 0.$$
+
+The second line follows from the fact that $\textrm{range} \: T \subseteq W$ so $\textrm{dim} \: \textrm{range} \: T \leq \textrm{dim} \: W$. Since $ \textrm{dim} \:  \textrm{null}  \: T > 0$, we know that there exist vectors other than the zero vector that get mapped to zero, so $T$ can't be one-to-one.
+\end{proof}
+
+Using this theorem, we proved a very strong statement about linear transformations as a whole in just three lines. That's pretty cool.
+
+\subsection*{The Matrix of a Linear Map}
 
 \end{document}
