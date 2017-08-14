@@ -127,4 +127,57 @@ Using this theorem, we proved a very strong statement about linear transformatio
 
 \subsection*{The Matrix of a Linear Map}
 
+Matrices:  the bane of every engineering student's existence at one point or another. Up until now we've been looking at linear algebra through the lens of abstract linear transformations and, as a result, we haven't been able to work through many concrete examples. To use what we've learned about linear maps in a real-world setting we need matrices. Let's quickly run through the basics of matrices before going any further. An $m \times n$ matrix $A$ is an $m \times n$ rectangular grid of real numbers that looks like this:
+
+$$A = 
+\begin{pmatrix} 
+a_{11} & a_{12} & \ldots & a_{1n} \\
+\vdots  & \ddots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \ldots & a_{mn}
+\end{pmatrix}.$$
+
+We'll use $a_{ij}$ to denote the entry of $A$ in the $i$th row and $j$th column. Recall that we can add and multiply matrices (assuming the dimensions work out) and that we can multiply a vector by a matrix. Let's look at how these work. If we take $A$ to be the matrix above and let $v = (v_1, v_2, \ldots, v_n)^T$ be a vector in $\mathbb{R}^n$ then
+ 
+\[ Av = \begin{pmatrix} 
+a_{11} & a_{12} & \ldots & a_{1n} \\
+\vdots  & \ddots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \ldots & a_{mn}
+\end{pmatrix}
+%
+\begin{pmatrix}
+v_1 \\
+v_2 \\
+\vdots \\
+v_n
+\end{pmatrix} = 
+%
+v_1  \begin{pmatrix}
+a_{11} \\
+a_{21} \\
+\vdots \\
+a_{m1}
+\end{pmatrix} +
+%
+v_2  \begin{pmatrix}
+a_{12} \\
+a_{22} \\
+\vdots \\
+a_{m2}
+\end{pmatrix} +
+\ldots +
+%
+v_n  \begin{pmatrix}
+a_{1n} \\
+a_{2n} \\
+\vdots \\
+a_{mn}
+\end{pmatrix} .\]
+
+Matrix multiplication is more cumbersome to write out completely, but if $A$ is an $m \times n$ matrix and $B$ is an $n \times k$ matrix then $AB$ is an $m \times k$ whose entry in the $i$th row and $j$th column is
+
+$$ab_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}.$$
+
+
+
+
 \end{document}
