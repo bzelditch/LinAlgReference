@@ -223,6 +223,23 @@ a_{mn}
 corresponds exactly to the vector $Tv$ (with respect to this particular basis).
 
 \vskip 3mm
-This is a big deal. It means that there's a \textit{one-to-one correspondence} between matrices and linear transformations with respect to a given basis. Given a linear transformation $T : \mathbb{R}^n \rightarrow \mathbb{R}^m$ there exists a $n \times m$ matrix $M(T)$ that corresponds precisely to $T$. Similarly, given a $n \times m$ matrix $A$ there exists some linear transformation $L(A) : \mathbb{R}^n \rightarrow \mathbb{R}^m$ that corresponds precisely to $A$. This means that matrices and linear maps are essentially interchangeable and that there is no meaningful difference between the two when working through problems. A good way to think about it this:  Linear maps are the fundamental objects of study of linear algebra and matrices are the tools we use to study them.
+This is a big deal. It means that there's a \textit{one-to-one correspondence} between matrices and linear transformations with respect to a given basis. Given a linear transformation $T : \mathbb{R}^n \rightarrow \mathbb{R}^m$ there exists a $n \times m$ matrix $M(T)$ that corresponds precisely to $T$. Similarly, given a $n \times m$ matrix $A$ there exists some linear transformation $L(A) : \mathbb{R}^n \rightarrow \mathbb{R}^m$ that corresponds precisely to $A$. Note that this implies that $\textrm{dim} \: \mathcal{L}(\mathbb{R}^n, \mathbb{R}^m) = nm$ and that, more generally, $\textrm{dim} \: \mathcal{L}(V, W) = (\textrm{dim} \: V)(\textrm{dim} \: W)$. All of this means that matrices and linear maps are essentially interchangeable and that there is no meaningful difference between the two when working through problems. A good way to think about it this:  Linear maps are the fundamental objects of study of linear algebra and matrices are the tools we use to study them.
+
+
+\vskip 3mm
+One more thing:  a linear transformation, or its corresponding matrix, is always defined \textit{with respect to a basis}. This is crucial to understand when learning about linear maps and matrices, but people often overlook it. Since there are many choices of a basis for a given vector space, there are just as many choices of the \textit{representation} of a given linear map. In other words, two different matrices may correspond to the same linear map if they are with respect to two different bases. For a particular basis, though, there is only one matrix representation per linear map and vice versa. Unless stated otherwise, all linear maps and matrices that we'll look at here will be with respect to the standard basis $e_1, e_2, \ldots, e_n$.
+
+
+\subsection*{Invertibility}
+
+This brings us to the last section of this chapter:  invertibility. A linear map $T \in \mathcal{L}(V, W)$ is said to be \textit{invertible} if there exists another linear map $S \in \mathcal{L}(W, V)$ such that $TS$ is the identity map on $V$ and $ST$ is the identity map on $W$. We call $S$ the \textit{inverse} of $T$ and we often denote it by $T^{-1}$. 
+
+
+We won't prove it here, but an important fact about inverse maps is that they're unique, i.e. if $S$ and $S'$ are inverses of $T$ then $S = S'$. Another important fact is that a linear map $T$ is invertible if and only if it is both one-to-one and onto. This actually implies that $\textrm{dim} \: V = \textrm{dim} \: W$ must hold for $T$ to be invertible as well.
+
+We say that two vector spaces $V$ and $W$ are \textit{isomorphic}, denoted $V \cong W$, if there exists an invertible linear map from one onto the other. Intuitively, this means that $V$ and $W$ are the "same" vector space up to renaming of the vectors. In other words, if you took each vector $v \in V$ and gave it a new name, but still preserved the relationships between the vectors, then that new renamed vector space could be called $W$. Isomorphisms pop up pretty frequently in math when showing that two vector spaces are of the same size or are essentially the same, so it's good to become familiar with them early on.
+
+\subsection*{Summary}
+
 
 \end{document}
