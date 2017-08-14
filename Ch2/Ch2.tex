@@ -178,6 +178,51 @@ Matrix multiplication is more cumbersome to write out completely, but if $A$ is 
 $$ab_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}.$$
 
 
+So that's how matrix multiplication works. It's worth working through a few examples on one's own because the formulas make it look more complicated than it is.
 
+\vskip 3mm
+This brings us to the meat of this section: linear transformations as matrices. Remember from the first section of this chapter that if $v \in V$ was a vector in a vector space $V$, if $b_1, b_2, \ldots, b_n$ was a basis of $V$, and if $T : V \rightarrow W$ was a linear map from $V$ to another vector space $W$ then
+
+$$Tv = T(v_1 b_1 + v_2 b_2 + \ldots + v_n b_n) = v_1 Tb_1 + v_2 Tb_2 + \ldots + v_n Tb_n$$
+
+for some $v_1, v_2, \ldots, v_n \in \mathbb{R}$.
+
+\vskip 3mm
+
+Now compare this last expression to the one right above for the product $Av$. They look almost exactly the same!
+
+\vskip 2mm
+That's because they are. If we construct a matrix $A$ such that $k$th column of $A$ is equal to $Tb_k$, the image of the $k$th basis vector of $V$ under $T$, then the expression
+
+\[ Av = 
+%
+v_1  \begin{pmatrix}
+a_{11} \\
+a_{21} \\
+\vdots \\
+a_{m1}
+\end{pmatrix} +
+%
+v_2  \begin{pmatrix}
+a_{12} \\
+a_{22} \\
+\vdots \\
+a_{m2}
+\end{pmatrix} +
+\ldots +
+%
+v_n  \begin{pmatrix}
+a_{1n} \\
+a_{2n} \\
+\vdots \\
+a_{mn}
+\end{pmatrix} \]
+
+\vskip 1mm
+
+corresponds exactly to the vector $Tv$.
+
+\vskip 3mm
+This is a big deal. It means that there's a \textit{one-to-one correspondence} between matrices and linear transformations. Given a linear transformation $T : \mathbb{R}^n \rightarrow \mathbb{R}^m$ there exists a $n \times m$ matrix $M(T)$ that corresponds precisely to $T$. Similarly, given a $n \times m$ matrix $A$ there exists some linear transformation $L(A) : \mathbb{R}^n \rightarrow \mathbb{R}^m$
 
 \end{document}
