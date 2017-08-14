@@ -173,7 +173,7 @@ a_{2n} \\
 a_{mn}
 \end{pmatrix} .\]
 
-Matrix multiplication is more cumbersome to write out completely, but if $A$ is an $m \times n$ matrix and $B$ is an $n \times k$ matrix then $AB$ is an $m \times k$ whose entry in the $i$th row and $j$th column is
+Matrix multiplication is more cumbersome to write out completely, but if $A$ is an $m \times n$ matrix and $B$ is an $n \times k$ matrix then $AB$ is an $m \times k$ matrix whose entry in the $i$th row and $j$th column is
 
 $$ab_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}.$$
 
@@ -220,9 +220,9 @@ a_{mn}
 
 \vskip 1mm
 
-corresponds exactly to the vector $Tv$.
+corresponds exactly to the vector $Tv$ (with respect to this particular basis).
 
 \vskip 3mm
-This is a big deal. It means that there's a \textit{one-to-one correspondence} between matrices and linear transformations. Given a linear transformation $T : \mathbb{R}^n \rightarrow \mathbb{R}^m$ there exists a $n \times m$ matrix $M(T)$ that corresponds precisely to $T$. Similarly, given a $n \times m$ matrix $A$ there exists some linear transformation $L(A) : \mathbb{R}^n \rightarrow \mathbb{R}^m$
+This is a big deal. It means that there's a \textit{one-to-one correspondence} between matrices and linear transformations with respect to a given basis. Given a linear transformation $T : \mathbb{R}^n \rightarrow \mathbb{R}^m$ there exists a $n \times m$ matrix $M(T)$ that corresponds precisely to $T$. Similarly, given a $n \times m$ matrix $A$ there exists some linear transformation $L(A) : \mathbb{R}^n \rightarrow \mathbb{R}^m$ that corresponds precisely to $A$. This means that matrices and linear maps are essentially interchangeable and that there is no meaningful difference between the two when working through problems. A good way to think about it this:  Linear maps are the fundamental objects of study of linear algebra and matrices are the tools we use to study them.
 
 \end{document}
