@@ -58,5 +58,18 @@ That's about it for invariant subspaces. We'll see why they're so important in t
 
 \subsection*{Eigenvalues and Eigenvectors}
 
+Now that we're pretty familiar with invariant subspaces, let's look at a special case of them:  one-dimensional invariant subspaces. Let's first define the one-dimensional subspace.
+Let $V$ be a vector space, say $V = \mathbb{R}^n$, and let $u \in V$. Then the set
+
+$$U = \{ \alpha u : \alpha \in \mathbb{R} \}$$
+
+is a one-dimensional subspace of $V$. In fact, all one-dimensional subspaces are of this form.
+
+Now let $T \in \mathcal{L} (V)$. The subspace $U$ is invariant under $T$ if for all $u \in U$ we have $Tu \in U$, in other words if
+
+$$Tu = \lambda u$$
+
+for some $\lambda \in \mathbb{R}$. If this is the case then we say that $\lambda$ is an \textit{eigenvalue} of $T$ and that $u$ is the corresponding \textit{eigenvector}. Observe that if $u$ is an eigenvector of $T$ corresponding to the eigenvalue $\lambda$ then any scalar multiple $\alpha u$ of $u$ is also an eigenvector of $T$ with the eigenvalue $\alpha \lambda$ because $T(\alpha u) = \alpha (Tu) = \alpha \lambda$. This is another way of looking at the invariance of $U$.
+
 
 \end{document}
