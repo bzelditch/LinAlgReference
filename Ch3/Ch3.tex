@@ -27,7 +27,36 @@ is going to be a good one. Stay tuned.
 
 \subsection*{Invariant Subspaces}
 
+Before we can think about eigenvalues and eigenvectors, we need a refresher on linear operators. Remember from last chapter that a linear operator $T \in \mathcal{L} (V)$ on a vector space $V$ is a linear map from $V$ to itself. Now imagine that $T$ is some particularly nasty linear map and is complicated to visualize because $V$ is a high dimensional vector space. Remember from Chapter 1 that we could decompose
 
+$$V = U_1 \oplus U_2 \oplus \dots \oplus U_n$$
+
+where $\oplus$ is the direct sum. If we could understand how $T$ behaves on each subspace $U_j$ individually, then we would understand how it behaves on $V$ by linearity. Let $T|_{U_j}$ denote the \textit{restriction} of $T$ to the subspace $U_j$, i.e. we're considering $U_j$ to be the domain of $T$ instead of $V$. Since $U_j$ is smaller than $V$ it makes sense to think that it would easier to deal with $T$ on $U_j$ than on $V$.
+
+But what if $T|_{U_j}$ doesn't map to $U_j$ to itself, i.e. what if there exists some $u \in U_j$ such that $Tu \notin U_j$? In other words, what if $T|_{U_j}$ is not an operator on $U_j$?
+
+Well that would screw things up. Instead we'll only consider decompositions of $V$ such that $T|_{U_j}$ is an operator on $U_j$. This has a name:  we say that a subspace $U \subset V$ is \textit{invariant} under a linear operator $T$ if for all $u \in U$ we have $Tu \in U$, equivalently if $T|_U$ is an operator on $U$. So from now on, we'll only consider direct sum decompositions of invariant subspaces.
+
+Let's drive this point home by looking at a few examples of invariant subspaces. Let $T \in \mathcal{L}(V)$. Then $\{0\}$ and $V$ itself are invariant subspaces (the so called trivial cases). Additionally, $\textrm{null} \: T$ and $\textrm{range} \: T$ are both invariant under $T$ (the proofs for both cases are easy). For a more concrete example, suppose that $T \in \mathcal{L} (\mathbb{R}^2)$ is given by the map
+
+\[ \begin{pmatrix}
+x_1 \\
+x_2
+\end{pmatrix}
+%
+\mapsto
+\begin{pmatrix}
+3x_1 \\
+x_2
+\end{pmatrix}
+\]
+
+Then the $x$-axis is invariant under $T$ because if $(x_1, 0)^T$ is a point on the $x$-axis then $T((x_1, 0)^T) = (3x_1, 0)^T$ is also a point on the $x$-axis.
+
+That's about it for invariant subspaces. We'll see why they're so important in the next few sections.
+
+
+\subsection*{Eigenvalues and Eigenvectors}
 
 
 \end{document}
