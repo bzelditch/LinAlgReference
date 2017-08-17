@@ -71,5 +71,37 @@ $$Tu = \lambda u$$
 
 for some $\lambda \in \mathbb{R}$. If this is the case then we say that $\lambda$ is an \textit{eigenvalue} of $T$ and that $u$ is the corresponding \textit{eigenvector}. Observe that if $u$ is an eigenvector of $T$ corresponding to the eigenvalue $\lambda$ then any scalar multiple $\alpha u$ of $u$ is also an eigenvector of $T$ with the eigenvalue $\alpha \lambda$ because $T(\alpha u) = \alpha (Tu) = \alpha \lambda u$. This is another way of looking at the invariance of $U$.
 
+\vskip 3mm
+Another way of looking at eigenvalues and eigenvectors is this:  the equation $Tu = \lambda u$ is equivalent to $(T - \lambda I)u = 0$, where $I$ is the identity. This second equation is telling us that $u$ is an eigenvector of $T$ precisely when $u$ is in the null space (or kernel) of $T - \lambda I$. In other words, the set of eigenvectors of $T$ corresponding to $\lambda$ equals the null space of $T - \lambda I$, written $\textrm{null} (T - \lambda I)$! Remember from last chapter that this is a subspace.
+
+This is a revelation. It means that we can determine whether or not $\lambda$ is an eigenvalue of $T$ by checking if $T - \lambda I$ has a non-trivial kernel, i.e. if $\textrm{dim} \:  \textrm{null} (T - \lambda I) > 0$. Equivalently, we can check if $T - \lambda I$ is not injective and therefore not invertible.
+
+
+Let's look at an example. Suppose that $T \in \mathcal{L} (\mathbb{R}^2)$ is the linear map that we looked at above, with $T((x_1, x_2)^T)) = (3x_1, x_2)^T$. We want to determine if $T$ has any eigenvalues and eigenvectors. To do this, let's go back to the definition. Suppose $T$ does have an eigenvalue and call it $\lambda$. Then we have
+
+\[ 
+\begin{pmatrix}
+3x_1 \\
+x_2
+\end{pmatrix}
+=
+\lambda \begin{pmatrix}
+x_1 \\
+x_2
+\end{pmatrix}
+\]
+
+for some non-zero vector, i.e. both $x_1 \neq 0$ and $x_2 \neq 0$. In the first coordinate we have $3x_1 = \lambda x_1$ and in the second coordinate we have $x_2 = \lambda x_2$. Clearly there's no value of $\lambda$ that satisfies both of these equations simultaneously for all values of $x_1, x_2$. But remember that we can choose one of $x_1, x_2$ to be zero (but not both) and go from there. Let's choose $x_2 = 0$. Then the second equation holds no matter what $\lambda$ is and the first equation holds for all $x_1$ when $\lambda = 3$. Therefore \textit{any} non-zero vector of the form $(x_1, 0)^T$ is an eigenvector of $T$ corresponding to the eigenvalue 3. In other words,
+
+$$\textrm{null} (T - 3I) = \{ (x_1, 0)^T : x_1 \in \mathbb{R} \}.$$
+
+But we also could have chosen $x_1 = 0$. In this case the first equation equation holds no matter what $\lambda$ is and the second equation holds for all $x_2$ when $\lambda = 1$. Therefore any non-zero vector of the form $(0, x_2)^T$ is an eigenvector of $T$ corresponding to the eigenvalue 1, i.e.
+
+$$\textrm{null} (T - I) = \{ (0, x_2)^T : x_2 \in \mathbb{R} \}.$$
+
+These are the only eigenvalues of $T$ and their only corresponding sets of eigenvectors. Observe that both $\textrm{null} (T - 3I)$ and $\textrm{null} (T - I)$ are invariant subspaces of dimension one as promised.
+
+\vskip 3mm
+One last thing: As we've seen from this example, while a linear map $T$ may have a few eigenvalues, it always has infinitely many eigenvectors corresponding to its eigenvalues. Therefore it's usually convenient to pick the simplest possible eigenvector corresponding to a particular eigenvalue. For example, in the case we just looked at, we would probably say that $(1, 0)^T$ is the eigenvector corresponding to $\lambda = 3$ and $(0, 1)^T$ is the eigenvector corresponding to $\lambda = 1$. Strictly speaking any scalar multiple of those vectors is also an eigenvector, but picking the simplest one makes our lives easier. 
 
 \end{document}
