@@ -118,7 +118,26 @@ One last thing: As we've seen from this example, while a linear map $T$ may have
 Let's take a step back. This chapter has been dedicated to the study of linear operators and, in particular, the study of eigenvalues and eigenvectors. So far we've been able to compute concrete examples of eigenvalues and eigenvectors only by reasoning through a system of equations, like we did in the example right above. This method generally won't work for more complex transformations because the system of equations almost always becomes intractable. To work with more complex transformations, we need matrices.
 
  Remember from last chapter that any linear transformation $T \in \mathcal{L} (V, W)$ corresponds to a rectangular matrix, so long as we choose a basis for $V$ and for $W$. Now that we're working with linear operators, all of the matrices that we'll be working with will be square so we only need to choose one basis. Also remember that a fixed linear operator $T \in \mathcal{L} (V)$ can have many different matrix representations depending on the choice of basis for $V$. A central goal of linear algebra is to show that, given a linear operator on $V$,  we can pick a basis of $V$ that makes the matrix corresponding to the linear operator as simple as possible.
+ 
+ What does it mean for a matrix to be "as simple as possible"? One natural way to define it might be to say that a matrix is simple if it has many zeros. But this is still a bit vague because having zeros scattered all throughout a matrix doesn't necessarily make it that much simpler to work with. On the other hand, if a matrix looked like this:
+ 
+ \[ 
+\begin{pmatrix}
+a_{11} & * & *\\
+0 & a_{22} & *\\
+\vdots & 0 & *\\
+0 & \cdots & a_{nn} 
+\end{pmatrix} \]
 
+then that would be much nicer. Note that the stars above the diagonal indicate any value and the entries below the diagonal are all zero. This is called an \textit{upper triangular} matrix.
+
+Luckily we can get any matrix to look like this! This brings us to one of the major theorems of this chapter. It goes: Let $V$ be a complex vector space and let $T \in \mathcal{L} (V)$. Then $T$ has an upper triangular matrix with respect to some basis of $V$.
+
+This is a pretty powerful statement and it is more subtle than it looks at first glance. The proof of it relies on the fact that any operator on a complex vector space has at least one eigenvalue, which we won't prove here. Using this fact, one can prove the theorem by induction on the size of the dimension of $V$. Note that the theorem says that $V$ is a \textit{complex} vector space, so we're working over the field $\mathbb{C}$ instead of $\mathbb{R}$ now. This is an important distinction because it
+is \textit{not} true in general that an operator over a real vector space has a real eigenvalue. The vast majority of them do not.
+
+ 
+ 
 \subsection*{Diagonal Matrices}
 
 \end{document}
